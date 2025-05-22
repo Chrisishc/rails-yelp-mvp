@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+  <ul>
+    <li>Address : <%= @restaurant.address%></li>
+    <li>Category : <%= @restaurant.category %></li>
+  </ul>
+
+<%= link_to "Delete",
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<button class="text-decoration-none"><%= link_to "Return at the list", restaurants_path %></button>
+
+<%= link_to "Add a review", review_path(@review) %>
